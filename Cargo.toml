@@ -1,0 +1,23 @@
+#used for dev/ standard builds
+[profile.dev]
+panic = "abort"
+
+#Built for release
+[profile.release]
+panic = "abort"
+
+[package]
+name = "os_project"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies.lazy_static]
+version = "1.0"
+features = ["spin_no_std"]
+
+[dependencies]
+bootloader = "0.9.8"
+volatile = "0.2.6"
+spin = "0.5.2"
